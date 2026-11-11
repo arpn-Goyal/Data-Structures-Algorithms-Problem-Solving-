@@ -33,17 +33,6 @@ This repository is maintained as a record of my problem-solving practice, revisi
 - Bit Manipulation
 - Math
 
-## 📊 Progress
-
-| Difficulty | Problems |
-|------------|----------|
-| 🟢 Easy | — |
-| 🟡 Medium | — |
-| 🔴 Hard | — |
-| **Total** | **—** |
-
-> Problem count will grow as I continue solving and revising problems.
-
 ## 🎯 Approach
 
 I focus on understanding the underlying pattern behind each problem rather than simply collecting solutions.
