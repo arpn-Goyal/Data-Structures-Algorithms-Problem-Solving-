@@ -1,7 +1,7 @@
 # LeetCode DSA - Data-Structures-Algorithms-Problem-Solving-
 
 
-My solutions to Data Structures & Algorithms problems solved on [LeetCode](https://leetcode.com/).
+My solutions to Data Structures & Algorithms problems solved on [LeetCode]([https://leetcode.com/](https://leetcode.com/u/YOto415iKb/)).
 
 This repository is maintained as a record of my problem-solving practice, revision, and preparation for Software Engineering interviews.
 
