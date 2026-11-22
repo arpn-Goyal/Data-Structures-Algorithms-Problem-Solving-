@@ -9,25 +9,21 @@ public:
         }
         return {maxi, sum};
     }
-    int checkThisCapacity(vector<int>& weights, int capacity, int days) {
-        int shipCapcaityPerDay = 0;
-        int i = 0;
-        while (i < weights.size()) {
-            shipCapcaityPerDay += weights[i];
-            if (shipCapcaityPerDay == capacity) {
-                shipCapcaityPerDay = 0;
-                days--;
-            } else if (shipCapcaityPerDay >= capacity) {
-                days--;
-                shipCapcaityPerDay = 0;
-                i--;
+    bool checkThisCapacity(vector<int>& weights, int capacity, int days) {
+        int daysNeeded = 1;
+        int currentLoad = 0;
+
+        for (int i = 0; i < weights.size(); i++) {
+
+            if (currentLoad + weights[i] > capacity) {
+                daysNeeded++;
+                currentLoad = weights[i];
+            } else {
+                currentLoad += weights[i];
             }
-            i++;
         }
-        if(shipCapcaityPerDay > 0 && shipCapcaityPerDay < capacity){
-            days--;
-        }
-        return (days >= 0)? true : false;
+
+        return daysNeeded <= days;
     }
     int shipWithinDays(vector<int>& weights, int days) {
         auto [low, high] = findMax(weights);
@@ -37,10 +33,9 @@ public:
 
             int capacity = checkThisCapacity(weights, mid, days);
             // then we will look for minimum capacity of ship per day
-            if(capacity){
+            if (capacity) {
                 high = mid - 1;
-            }
-            else{
+            } else {
                 low = mid + 1;
             }
         }
